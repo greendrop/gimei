@@ -27,3 +27,30 @@
 #
 #   # library "pathname"              # Standard libraries
 # end
+
+D = Steep::Diagnostic
+ 
+# target :lib do
+#   signature "sig" 
+# 
+#   check "lib"
+# 
+#   library "forwardable"
+#   library "yaml"
+# 
+#   configure_code_diagnostics(D::Ruby.default)
+#   # configure_code_diagnostics(D::Ruby.strict)
+#   # configure_code_diagnostics(D::Ruby.lenient)
+#   # configure_code_diagnostics(D::Ruby.silent)
+# end
+
+target :rbs_test do
+  signature "sig"
+
+  check "rbs_test"
+
+  library "forwardable"
+  library "yaml"
+
+  configure_code_diagnostics(D::Ruby.strict)
+end
