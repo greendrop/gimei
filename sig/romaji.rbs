@@ -1,0 +1,3 @@
+module Romaji
+  def self.kana2romaji: (String text) -> String
+end
